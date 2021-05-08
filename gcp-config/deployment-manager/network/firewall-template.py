@@ -11,7 +11,7 @@ def GenerateConfig(context):
           'sourceRanges': ['0.0.0.0/0'],
           'allowed': [{
               'IPProtocol': 'HTTP',
-              'ports': ["80"]
+              'ports': [80]
           }]
       }
   }]

@@ -10,8 +10,8 @@ def GenerateConfig(context):
           'network': context.properties['network'],
           'sourceRanges': ['0.0.0.0/0'],
           'allowed': [{
-              'IPProtocol': 'HTTP',
-              'ports': [80]
+              'IPProtocol': 'TCP',
+              'ports': ["80"]
           }]
       }
   }]

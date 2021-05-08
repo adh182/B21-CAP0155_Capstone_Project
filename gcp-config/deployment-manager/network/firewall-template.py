@@ -4,7 +4,6 @@ def GenerateConfig(context):
   """Create firewall rule - allowing HTTP connection"""
 
   resources = [{
-      resources:
       'name': context.env['name']+'allow-http',
       'type': 'compute.v1.firewall',
       'properties': {

@@ -4,7 +4,6 @@ def GenerateConfig(context):
   """Create custom subnetwork"""
 
   resources = [{
-      resources:
       'name': context.env['name'],
       'type': 'compute.v1.subnetwork',
       'properties': {

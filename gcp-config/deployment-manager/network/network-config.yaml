@@ -1,0 +1,22 @@
+#Configuration script to be deployed
+
+imports:
+- path: network-template.py
+- path: subnetwork-template.py
+- path: firewall-template.py
+
+resources:
+- name: network-asia
+  type: network-template.py
+
+- name: subnetwork-asia-southeast2
+  type: subnetwork-template.py
+  properties:
+    ipCidrRange: 10.10.0.0/16
+    network: $(ref.network-asia.selfLink)
+    region: asia-southeast2
+
+- name: network-asia
+  type: firewall-template.py
+  properties:
+    network: $(ref.network-asia.selfLink)

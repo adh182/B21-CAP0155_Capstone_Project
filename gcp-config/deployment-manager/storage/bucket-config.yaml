@@ -1,0 +1,8 @@
+#Storage configuration for deployment
+
+imports:
+- path: bucket-template.py
+
+resources:
+- name: bucket-1
+- type: bucket-template.py

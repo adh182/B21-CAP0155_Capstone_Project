@@ -5,4 +5,4 @@ imports:
 
 resources:
 - name: bucket-1
-- type: bucket-template.py
+  type: bucket-template.py

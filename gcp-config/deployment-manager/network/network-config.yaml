@@ -6,7 +6,7 @@ imports:
 - path: firewall-template.py
 
 resources:
-- name: network-asia-1
+- name: network-asia
   type: network-template.py
 
 - name: subnetwork-asia-southeast2
@@ -16,7 +16,7 @@ resources:
     network: $(ref.network-asia.selfLink)
     region: asia-southeast2
 
-- name: network-asia-1
+- name: network
   type: firewall-template.py
   properties:
     network: $(ref.network-asia.selfLink)

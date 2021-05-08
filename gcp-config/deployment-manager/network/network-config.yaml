@@ -1,4 +1,4 @@
-#Configuration script to be deployed
+#Configuration for deployment
 
 imports:
 - path: network-template.py

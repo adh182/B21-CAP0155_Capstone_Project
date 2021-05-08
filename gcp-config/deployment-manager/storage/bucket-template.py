@@ -4,9 +4,9 @@ def GenerateConfig(context):
 	'''Cretae cloud storage bucket'''
 
 	PROJECT_NAME = 'B21-CAP0155-Capstone-Project'
-	
+
 	resources = [{
-		'name': PROJECT_NAME + context.env['name'],
+		'name': PROJECT_NAME + '-' + context.env['name'],
 		'type': 'storage.v1.bucket',
 		'properties': {
 			'locationType': 'MULTI-REGION',

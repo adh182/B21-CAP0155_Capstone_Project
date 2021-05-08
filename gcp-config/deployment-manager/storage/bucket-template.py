@@ -9,7 +9,7 @@ def GenerateConfig(context):
 		'name': PROJECT_NAME + '-' + context.env['name'],
 		'type': 'storage.v1.bucket',
 		'properties': {
-			'locationType': 'MULTI_REGION',
+			'locationType': 'multi-region',
 			'location': 'ASIA',
 			'storageClass': 'STANDARD',
 			'versioning': {

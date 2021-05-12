@@ -8,6 +8,17 @@
     android:padding="16dp"
     tools:context=".ui.warning.WarningActivity">
 
+    <ImageView
+        android:id="@+id/iv_hazard"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icon_hazard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -21,7 +32,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/iv_hazard" />
 
     <TextView
         android:id="@+id/textView2"

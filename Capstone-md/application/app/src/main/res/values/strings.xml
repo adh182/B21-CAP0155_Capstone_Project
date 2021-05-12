@@ -9,4 +9,5 @@
     <string name="warning_mitigation_step_3">Get close to the strong part of the building structure</string>
     <string name="warning_mitigation_step_4">Find an exit</string>
     <string name="warning_hazard">HAZARD</string>
+    <string name="keyword_1">Taking cover under a table</string>
 </resources>

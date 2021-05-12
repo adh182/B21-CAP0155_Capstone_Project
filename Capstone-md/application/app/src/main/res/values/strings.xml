@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Capstone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_home_information">Information</string>
+    <string name="there_is_and_earthquake">"There is and earthquake."</string>
+    <string name="warning_mitigation_step_1">Protect your head</string>
+    <string name="warning_mitigation_step_2">Take cover under the table</string>
+    <string name="warning_mitigation_step_3">Get close to the strong part of the building structure</string>
+    <string name="warning_mitigation_step_4">Find an exit</string>
+    <string name="warning_hazard">HAZARD</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_red"
+    android:padding="16dp"
+    tools:context=".ui.warning.WarningActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:text="@string/warning_hazard"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/there_is_and_earthquake"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/warning_mitigation_step_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/warning_mitigation_step_1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic__circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/warning_mitigation_step_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/warning_mitigation_step_2"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic__circle"
+        app:layout_constraintStart_toStartOf="@+id/warning_mitigation_step_1"
+        app:layout_constraintTop_toBottomOf="@+id/warning_mitigation_step_1" />
+
+    <TextView
+        android:id="@+id/warning_mitigation_step_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="16dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/warning_mitigation_step_3"
+        android:textColor="@color/white"
+        android:maxLines="3"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic__circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/warning_mitigation_step_1"
+        app:layout_constraintTop_toBottomOf="@+id/warning_mitigation_step_2" />
+
+    <TextView
+        android:id="@+id/warning_mitigation_step_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:text="@string/warning_mitigation_step_4"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic__circle"
+        app:layout_constraintStart_toStartOf="@+id/warning_mitigation_step_1"
+        app:layout_constraintTop_toBottomOf="@+id/warning_mitigation_step_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,8 @@
-package com.cendekia.capstone
+package com.cendekia.capstone.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cendekia.capstone.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

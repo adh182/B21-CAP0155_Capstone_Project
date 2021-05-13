@@ -1,7 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Capstone</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="my_home_information">Information</string>
     <string name="there_is_and_earthquake">"There is and earthquake."</string>
     <string name="warning_mitigation_step_1">Protect your head</string>
@@ -9,5 +8,38 @@
     <string name="warning_mitigation_step_3">Get close to the strong part of the building structure</string>
     <string name="warning_mitigation_step_4">Find an exit</string>
     <string name="warning_hazard">HAZARD</string>
-    <string name="keyword_1">Taking cover under a table</string>
+
+    <string name="during_1_keyword_1">Taking cover under a table</string>
+    <string name="during_1_keyword_2">Cover your head</string>
+    <string name="during_1_keyword_3">Find an exit</string>
+    <string name="during_1_keyword_4">When safe, exit immediately</string>
+
+    <string name="during_3_keyword_1" tools:ignore="StringEscaping">Don't use the elevator</string>
+    <string name="during_3_keyword_2">Use the emergency stairs</string>
+    <string name="during_3_keyword_3">Use the interphone</string>
+
+    <string name="during_4_keyword_1">Follow the evacuation instructions</string>
+
+    <string name="during_5_keyword_1">Go straight to the open field</string>
+    <string name="during_5_keyword_2" tools:ignore="StringEscaping">Don't stand near poles</string>
+    <string name="during_5_keyword_3" tools:ignore="StringEscaping">Don't stand near trees</string>
+    <string name="during_5_keyword_4" tools:ignore="StringEscaping">Don't stand near power sources</string>
+    <string name="during_5_keyword_5" tools:ignore="StringEscaping">Don't stand near building</string>
+
+    <string name="during_step_1">The shock will be felt for a while.
+        During that time, seek your own safety by taking cover under a table to avoid falling objects and glass windows.
+        Cover your head, or stand under a door. When you feel safe, immediately run out of the building.</string>
+
+    <string name="during_step_2">Identify parts of the building that have a strong structure, such as the corners of buildings and columns.</string>
+
+    <string name="during_step_3">Do not use the elevator if you feel it is shaking.
+        Use the emergency stairs to evacuate out of the building.
+        When in the elevator, press all buttons or use the interphone to call the building manager.</string>
+
+    <string name="during_step_4">If you are in a building with security personnel, follow the evacuation instructions.</string>
+
+    <string name="during_step_5">When leaving the building, pay attention to the possibility of broken glass, tile, or other materials.
+        Keep your head covered and go straight to the open field, don't stand near poles, trees, power sources, or buildings that may collapse.</string>
+
+
 </resources>

@@ -1,63 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
-    android:padding="16dp"
+    android:background="@drawable/background_gradient"
     tools:context=".ui.mitigation.MitigationActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/during_earthquake"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_during_earthquake_info_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="center_vertical"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circleImageView2"
-        tools:text="During Earthquake" />
-
-    <TextView
-        android:id="@+id/tv_during_earthquake_info_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_light"
-        android:gravity="center_vertical"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_during_earthquake_info_2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_2"
-        tools:text="dummy text" />
-
-    <TextView
-        android:id="@+id/tv_highlight_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/higlight_shape"
-        android:fontFamily="@font/poppins_bold"
-        android:padding="4dp"
-        android:text="@string/keyword_1"
-        android:textColor="@color/main_blue"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_during_earthquake_info_1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_1" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_during_earthquake"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/during_earthquake"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_during_earthquake"
+            tools:text="During Earthquake" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_light"
+            android:maxWidth="300dp"
+            android:maxLines="10"
+            android:text="@string/during_step_1"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_during_earthquake_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_title" />
+
+        <TextView
+            android:id="@+id/tv_highlight_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_1_keyword_1"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_during_earthquake_info_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_1" />
+
+        <TextView
+            android:id="@+id/tv_highlight_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_1_keyword_2"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_highlight_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_highlight_1" />
+
+        <TextView
+            android:id="@+id/tv_highlight_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_1_keyword_3"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_highlight_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_1" />
+
+        <TextView
+            android:id="@+id/tv_highlight_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_1_keyword_4"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_highlight_3"
+            app:layout_constraintTop_toTopOf="@+id/tv_highlight_3" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_info_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:maxWidth="300dp"
+            android:maxLines="10"
+            android:text="@string/during_step_2"
+            android:textAlignment="textEnd"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_3" />
+
+        <TextView
+            android:id="@+id/tv_highlight_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/warning_mitigation_step_3"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_during_earthquake_info_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_2" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_info_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_light"
+            android:maxWidth="180dp"
+            android:maxLines="10"
+            android:text="@string/during_step_3"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_5" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/stair"
+            app:layout_constraintBottom_toBottomOf="@id/tv_during_earthquake_info_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_during_earthquake_info_3"
+            app:layout_constraintTop_toTopOf="@id/tv_during_earthquake_info_3" />
+
+        <TextView
+            android:id="@+id/tv_highlight_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_3_keyword_1"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_during_earthquake_info_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_3" />
+
+        <TextView
+            android:id="@+id/tv_highlight_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_3_keyword_2"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_highlight_6"
+            app:layout_constraintTop_toTopOf="@+id/tv_highlight_6" />
+
+        <TextView
+            android:id="@+id/tv_highlight_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_3_keyword_3"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_highlight_6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_6" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_info_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:maxLines="10"
+            android:text="@string/during_step_4"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_8" />
+
+        <TextView
+            android:id="@+id/tv_highlight_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_4_keyword_1"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_during_earthquake_info_4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_4" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_open_field"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/open_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_highlight_9" />
+
+        <TextView
+            android:id="@+id/tv_during_earthquake_info_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_light"
+            android:maxWidth="330dp"
+            android:maxLines="10"
+            android:text="@string/during_step_5"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_open_field" />
+
+        <TextView
+            android:id="@+id/tv_highlight_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_5_keyword_1"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_during_earthquake_info_5" />
+
+        <TextView
+            android:id="@+id/tv_highlight_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_5_keyword_2"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_10" />
+
+        <TextView
+            android:id="@+id/tv_highlight_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_5_keyword_3"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tv_highlight_11"
+            app:layout_constraintTop_toTopOf="@+id/tv_highlight_11" />
+
+        <TextView
+            android:id="@+id/tv_highlight_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_5_keyword_4"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_11" />
+
+        <TextView
+            android:id="@+id/tv_highlight_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/higlight_shape"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="4dp"
+            android:text="@string/during_5_keyword_5"
+            android:textColor="@color/main_blue"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_highlight_13" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

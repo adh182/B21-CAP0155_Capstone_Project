@@ -9,6 +9,9 @@
     <string name="warning_mitigation_step_4">Find an exit</string>
     <string name="warning_hazard">HAZARD</string>
 
+    <string name="tab_title_status">Status</string>
+    <string name="tab_title_my_home">My Home</string>
+
     <string name="during_1_keyword_1">Taking cover under a table</string>
     <string name="during_1_keyword_2">Cover your head</string>
     <string name="during_1_keyword_3">Find an exit</string>
@@ -41,5 +44,18 @@
     <string name="during_step_5">When leaving the building, pay attention to the possibility of broken glass, tile, or other materials.
         Keep your head covered and go straight to the open field, don't stand near poles, trees, power sources, or buildings that may collapse.</string>
 
+    <string name="post_2_keyword_1">Evacuate yourself</string>
+    <string name="post_2_keyword_2">Pay attention to the ruins that are dangerous</string>
+
+    <string name="post_3_keyword_1">Stand in an open area</string>
+    <string name="post_3_keyword_2">Avoid areas prone to landslides</string>
+
+    <string name="post_step_1">Stay alert for aftershocks.</string>
+
+    <string name="post_step_2">When inside a building, evacuate yourself after the earthquake has stopped.
+        Pay attention to the ruins and objects that are dangerous during the evacuation.</string>
+
+    <string name="post_step_3">Stand in an open area away from buildings and electrical and water installations.
+        If it is outside the building with cliffs around it, avoid areas prone to landslides.</string>
 
 </resources>

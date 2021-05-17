@@ -8,5 +8,5 @@ resources:
   type: sql-template.py
   properties:
     region: asia-southeast2
-    tier: db-n1-standard1
+    tier: db-n1-standard-1
     dataDiskSizeGb: 10

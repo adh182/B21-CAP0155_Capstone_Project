@@ -1,8 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.status.StatusFragment">
+    tools:context=".ui.warning.WarningActivity">
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/color_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/bg_green"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/icon_safe"
+            android:contentDescription="@string/icon" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:letterSpacing="0.3"
+            android:text="@string/standby"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/safe_area"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/tv_what_to_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="104dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="@string/what_to_do_about_it"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sub_title" />
+
+        <Button
+            android:id="@+id/button_mitigation_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/step_mitigation"
+            android:textColor="@color/main_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_what_to_do" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="40dp">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_detail_follower"
+                        style="@style/tvDetailStatus"
+                        android:text="@string/now" />
+
+                    <ImageView android:src="@drawable/icon_magnitudo" />
+
+                    <ImageView android:src="@drawable/icon_proximity" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        style="@style/tvDetailStatus"
+                        tools:text="08 Mei 2021" />
+
+                    <TextView
+                        android:id="@+id/tv_magnitudo"
+                        style="@style/tvDetailStatus"
+                        tools:text="5.7" />
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        style="@style/tvDetailStatus"
+                        tools:text="Jakarta" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/tvDetailStatus"
+                        tools:text="00.42.37 WIB" />
+
+                    <TextView
+                        style="@style/tvDetailStatus"
+                        android:text="@string/magnitudo" />
+
+                    <TextView
+                        style="@style/tvDetailStatus"
+                        android:text="@string/gempa_proximity" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp">
+
+                    <TextView
+                        style="@style/tvDetailStatusLiveReport"
+                        android:text="Live Report" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_live_report"
+                        style="@style/tvDetailStatusLiveReport"
+                        android:layout_span="3"
+                        android:fontFamily="@font/poppins_regular"
+                        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

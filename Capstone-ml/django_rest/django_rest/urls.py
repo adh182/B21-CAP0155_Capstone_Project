@@ -19,12 +19,14 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from api.serializers.datasetSerializer import DatasetSerializer
 from api.views.datasetView import DatasetViewSet
+from api.views import predictionView
 
 router = routers.DefaultRouter()
-router.register(r'prediction', DatasetViewSet)
+router.register(r'dataset', DatasetViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/prediction/',predictionView.PredictionViewSet, name='coba'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

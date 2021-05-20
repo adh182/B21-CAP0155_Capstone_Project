@@ -40,6 +40,3 @@ class Dataset(models.Model):
 	has_secondary_use_gov_office = models.BooleanField(default=False)
 	has_secondary_use_use_police = models.BooleanField(default=False)
 	has_secondary_use_other = models.BooleanField(default=False)
-
-def __str__(self):
-	return self.land_surface_condition

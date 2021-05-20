@@ -19,10 +19,12 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from api.serializers.datasetSerializer import DatasetSerializer
 from api.views.datasetView import DatasetViewSet
+from api.views.trainDataView import TrainDataViewSet
 from api.views import predictionView
 
 router = routers.DefaultRouter()
 router.register(r'dataset', DatasetViewSet)
+router.register(r'train', TrainDataViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

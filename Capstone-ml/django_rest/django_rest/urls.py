@@ -26,7 +26,7 @@ router.register(r'dataset', DatasetViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/prediction/',predictionView.PredictionViewSet, name='coba'),
+    path('api/prediction/',predictionView.PredictionViewSet, name='prediction'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

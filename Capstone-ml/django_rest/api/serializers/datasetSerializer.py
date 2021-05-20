@@ -1,4 +1,4 @@
-from api.model.datasetModel import Dataset
+from api.models.datasetModel import Dataset
 from rest_framework import serializers
 
 class DatasetSerializer(serializers.ModelSerializer):

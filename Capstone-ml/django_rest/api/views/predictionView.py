@@ -55,7 +55,8 @@ def PredictionViewSet(request):
     serializer = DatasetSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
-        prediction = predict(serializer.data)
+        prediction = {"prediction":predict(serializer.data)}
+        prediction.update(serializer.data)
         return Response(prediction, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -69,7 +70,7 @@ def predict(data):
     test = test.tail(1)
     test = test.astype(int)
     
-    prediction = np.argmax(model.predict(test), axis=-1)
+    prediction = np.argmax(model.predict(test), axis=-1)[0]
 
     return prediction
 

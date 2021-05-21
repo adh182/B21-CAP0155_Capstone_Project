@@ -56,7 +56,7 @@
 <br>
 
 # 2) Get a Data - Dataset <a name="get"></a>
-### GET /api/dataset/{id}
+### GET /api/dataset/{id}/
 
 ### Response Body
 
@@ -105,7 +105,7 @@
 <br>
 
 # 4) Update Data - Dataset<a name="update"></a>
-### PUT /api/dataset/{id}
+### PUT /api/dataset/{id}/
 
 ### Request Body
 
@@ -197,7 +197,7 @@
 <br>
 
 # 4) Delete Data - Dataset <a name="delete"></a>
-### DELETE /api/dataset/{id}
+### DELETE /api/dataset/{id}/
 
 ### Response Body
 

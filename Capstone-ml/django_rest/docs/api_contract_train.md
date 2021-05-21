@@ -151,7 +151,7 @@
 <br>
 
 # 3) Get a Data - Train Data <a name="get"></a>
-### GET /api/train/{id}
+### GET /api/train/{id}/
 
 ### Response Body
 
@@ -201,7 +201,7 @@
 <br>
 
 # 4) Update Data - Train Data<a name="update"></a>
-### PUT /api/train/{id}
+### PUT /api/train/{id}/
 
 ### Request Body
 
@@ -295,7 +295,7 @@
 <br>
 
 # 5) Delete Data - Train Data <a name="delete"></a>
-### DELETE /api/train/{id}
+### DELETE /api/train/{id}/
 
 ### Response Body
 

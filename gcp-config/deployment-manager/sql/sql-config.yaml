@@ -1,0 +1,12 @@
+#Configuration for deployment
+
+imports:
+- path: sql-template.py
+
+resources:
+- name: sql
+  type: sql-template.py
+  properties:
+    region: asia-southeast2
+    tier: db-n1-standard-1
+    dataDiskSizeGb: 10

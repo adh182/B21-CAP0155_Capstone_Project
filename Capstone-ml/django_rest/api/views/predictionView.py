@@ -51,7 +51,7 @@ def PredictionViewSet(request):
         'has_secondary_use_use_police': request.POST.get('has_secondary_use_use_police'),
         'has_secondary_use_other': request.POST.get('has_secondary_use_other'),
     }
-    print(data)
+
     serializer = DatasetSerializer(data=data)
     if serializer.is_valid():
         serializer.save()

@@ -78,11 +78,12 @@ WSGI_APPLICATION = 'django_rest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbname',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': '',
+        'HOST': '/cloudsql/b21-cap0155-capstone-project:asia-southeast2:b21-cap0155-capstone-project-sql-instance',
         'PORT': '',
+	'NAME': 'b21-cap0155-capstone-project-sql-db',
+        'USER': 'admin',
+        'PASSWORD': 'password12345',
+
     }
 }
 

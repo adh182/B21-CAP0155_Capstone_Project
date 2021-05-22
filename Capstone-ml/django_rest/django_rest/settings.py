@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 import pymysql
 pymysql.install_as_MySQLdb()
 
@@ -76,18 +77,29 @@ WSGI_APPLICATION = 'django_rest.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+if os.getenv('GAE_APPLICATION', None):
+	DATABASES = {
+	    'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'HOST': '/cloudsql/b21-cap0155-capstone-project:asia-southeast2:b21-cap0155-capstone-project-sql-instance',
+		'NAME': 'b21-cap0155-capstone-project-sql-db',
+		'USER': 'admin',
+		'PASSWORD': 'password12345',
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '/cloudsql/b21-cap0155-capstone-project:asia-southeast2:b21-cap0155-capstone-project-sql-instance',
-        'PORT': '',
-	'NAME': 'b21-cap0155-capstone-project-sql-db',
-        'USER': 'admin',
-        'PASSWORD': 'password12345',
+	    }
+	}
+else:
+	DATABASES = {
+	    'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'HOST': '34.101.208.247',
+		'PORT': '3306',
+		'NAME': 'b21-cap0155-capstone-project-sql-db',
+		'USER': 'admin',
+		'PASSWORD': 'password12345',
 
-    }
-}
+	    }
+	}
 
 
 # Password validation

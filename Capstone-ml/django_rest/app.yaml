@@ -1,4 +1,4 @@
-runtime: python39
+runtime: python37
 entrypoint: gunicorn -b :$PORT django_rest.wsgi
 
 handlers:

@@ -15,4 +15,4 @@ handlers:
 # required when static routes are defined, but can be omitted (along with
 # the entire handlers section) when there are no static files defined.
 - url: /.*
-  script: django_rest.wsgi.application
+  script: auto

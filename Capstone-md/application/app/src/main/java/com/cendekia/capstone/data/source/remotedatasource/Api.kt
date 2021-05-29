@@ -4,14 +4,21 @@ import com.cendekia.capstone.data.source.models.MyPredictionRequest
 import com.cendekia.capstone.data.source.models.MyPredictionResponse
 import com.cendekia.capstone.data.source.models.MyTrainResponse
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface Api {
-    @POST("/api/prediction/")
-    fun prediction(@Body body: MyPredictionRequest?): Call<MyPredictionResponse?>?
+//    @FormUrlEncoded
+//    @POST("/api/prediction/")
+//    fun prediction(@Body body: MyPredictionRequest): Call<MyPredictionResponse>
+
+    @FormUrlEncoded
+    @POST("posts")
+    fun prediction(
+        @Field("userId") userId: Int,
+        @Field("tittle") title: String,
+        @Field("body") text: String
+    ): Call<MyPredictionResponse>
 
     @GET("/api/train/")
-    fun getTrainData(): Call<MyTrainResponse?>?
+    fun getPosts(): Call<ArrayList<MyTrainResponse>>
 }

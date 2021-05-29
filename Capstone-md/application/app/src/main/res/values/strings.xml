@@ -60,4 +60,16 @@
     <string name="magnitudo">Magnitudo</string>
     <string name="gempa_proximity">Gempa Proximity</string>
 
+    <string name="password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="register">Register</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_an_account_login_here">ALREADY HAVE AN ACCOUNT? LOGIN HERE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

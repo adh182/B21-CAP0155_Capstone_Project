@@ -7,7 +7,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from api.models.datasetModel import Dataset
+from api.models.trainDataModel import TrainData
 from api.serializers.datasetSerializer import DatasetSerializer
+from api.serializers.trainDataSerializer import TrainDataSerializer
 
 @api_view(['POST'])
 def PredictionViewSet(request):
@@ -52,19 +54,19 @@ def PredictionViewSet(request):
         'has_secondary_use_other': request.POST.get('has_secondary_use_other'),
     }
 
-    serializer = DatasetSerializer(data=data)
+    damage_grade = predict(data)
+    data.update({'damage_grade': damage_grade})
+
+    serializer = TrainDataSerializer(data=data)
     if serializer.is_valid():
         serializer.save()
-        prediction = {"prediction":predict(serializer.data)}
-        prediction.update(serializer.data)
-        return Response(prediction, status=status.HTTP_201_CREATED)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 def predict(data):
     model = tf.keras.models.load_model('.\\api\\training_model\model.h5')
 
     test = pd.json_normalize(data)
-    test = test.drop(["id"],axis=1)
     test = one_hot(test)
 
     test = test.tail(1)
@@ -79,8 +81,11 @@ def one_hot(test):
     categorical_feature=['land_surface_condition', 'foundation_type', 'roof_type',
         'ground_floor_type', 'other_floor_type', 'position',
         'plan_configuration', 'legal_ownership_status']
+    int_feature=['geo_level_1_id', 'geo_level_2_id', 'geo_level_3_id', 'count_floors_pre_eq',
+        'age', 'area_percentage', 'height_percentage', 'count_families']
 
     test = dummy_data(test)
+    change_value = {'true': 1, 'false': 0, 'True': 1, 'False': 0}
 
     for column in list(test.columns):
         if column in categorical_feature:
@@ -90,6 +95,8 @@ def one_hot(test):
             test = test.drop(column, axis = 1)
             # Join the encoded df
             test = test.join(one_hot)
+        elif column not in int_feature:
+            test[column] = test[column].map(change_value)
     return test
 
 def dummy_data(test):

@@ -7,12 +7,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class MyPredictionResponse(
 
-//    val userId:String,
-//    val id : Int,
-//    val tittle : String?,
-//    @SerializedName("body")
-//    val text: String?
-
     @field:SerializedName("prediction")
     val prediction: Int? = null,
 

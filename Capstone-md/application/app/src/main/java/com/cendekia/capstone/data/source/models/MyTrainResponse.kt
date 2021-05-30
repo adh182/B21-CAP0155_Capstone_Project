@@ -4,7 +4,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
-@kotlinx.android.parcel.Parcelize
+@Parcelize
 data class MyTrainResponse(
 
     @field:SerializedName("id")
@@ -125,6 +125,5 @@ data class MyTrainResponse(
     val hasSecondaryUseOther: Boolean? = null,
 
     @field:SerializedName("damage_grade")
-    val damageGrade: Int? = null,
-
-    ) : Parcelable
+    val damageGrade: Int? = null
+) : Parcelable

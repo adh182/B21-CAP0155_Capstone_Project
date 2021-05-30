@@ -21,6 +21,8 @@ class PostAdapter(private val list: ArrayList<MyTrainResponse>): RecyclerView.Ad
         fun bind(myTrainRespone : MyTrainResponse){
             with(binding){
                 this.tvText.text ="id: ${myTrainRespone.id}\n"+
+                        "id: ${myTrainRespone.id}\n"+
+                        "damage grade : ${myTrainRespone.damageGrade}"+
                         "age: ${myTrainRespone.age}\n"+
                         "floors : ${myTrainRespone.areaPercentage}"
             }

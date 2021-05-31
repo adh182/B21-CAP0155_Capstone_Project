@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "711756790255",
+    "project_id": "awareauth",
+    "storage_bucket": "awareauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711756790255:android:9415312683c1e9eb1bde1a",
+        "android_client_info": {
+          "package_name": "com.cendekia.capstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711756790255-l5h8eftr6k96r837e8ghtlps1ak0rp24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX4WqguIvNKx1dheKHL9XDrRMioCVN_4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711756790255-l5h8eftr6k96r837e8ghtlps1ak0rp24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

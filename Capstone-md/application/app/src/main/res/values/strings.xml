@@ -57,7 +57,7 @@
     <string name="step_mitigation">STEP MITIGATION</string>
     <string name="icon">icon</string>
     <string name="now">Now</string>
-    <string name="magnitudo">Magnitudo</string>
+    <string name="sr">SR</string>
     <string name="gempa_proximity">Gempa Proximity</string>
 
     <string name="password">Password</string>
@@ -132,5 +132,7 @@
         <item>v</item>
         <item>w</item>
     </string-array>
+
+    <string name="richter_scale">%d</string>
 
 </resources>

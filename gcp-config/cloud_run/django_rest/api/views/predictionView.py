@@ -10,6 +10,8 @@ from api.models.datasetModel import Dataset
 from api.models.trainDataModel import TrainData
 from api.serializers.datasetSerializer import DatasetSerializer
 from api.serializers.trainDataSerializer import TrainDataSerializer
+from tensorflow.keras.models import load_model
+from keras.utils.data_utils import get_file
 
 @api_view(['POST'])
 def PredictionViewSet(request):
@@ -64,7 +66,11 @@ def PredictionViewSet(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 def predict(data):
-    model = tf.keras.models.load_model('.\\api\\training_model\model.h5')
+    model_file = get_file(
+        'model.h5',
+        'https://storage.googleapis.com/b21-cap0155-capstone-project-bucket-1/training_model/model.h5')
+    # model_url = 'https://storage.googleapis.com/b21-cap0155-capstone-project-bucket-1/training_model/model.h5'
+    model = load_model(model_file)
 
     test = pd.json_normalize(data)
     test = one_hot(test)

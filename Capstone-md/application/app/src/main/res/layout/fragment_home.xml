@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".HomeFragment">
+
+        <TextView
+            android:id="@+id/tvResponeCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/hello_blank_fragment"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvResponeCode"
+            tools:listitem="@layout/item_post" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvPost">
+
+            <EditText
+                android:id="@+id/geoLevel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Geo Level Id 1 (1/2/3)"
+                android:inputType="number"
+                android:nextFocusDown="@id/geoLevel2"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/geoLevel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Geo Level Id (1/2/3)"
+                android:inputType="number"
+                android:nextFocusDown="@id/geoLevel3"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/geoLevel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Geo Level Id (1/2/3)"
+                android:inputType="number"
+                android:nextFocusDown="@id/countFloorsPreEq"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/countFloorsPreEq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Jumlah Lantai"
+                android:inputType="number"
+                android:nextFocusDown="@id/age"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Usia Bangunan"
+                android:inputType="number"
+                android:nextFocusDown="@id/areaPercentage"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/areaPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Luas Bangunan"
+                android:inputType="number"
+                android:nextFocusDown="@id/heightPercentage"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/heightPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Tinggi Bangunan"
+                android:inputType="number"
+                android:nextFocusDown="@array/land_surface_condition"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Land Surface Condition"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/landSurfaceCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/land_surface_condition"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Foundation Type"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/foundationType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/foundation_type"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Roof Type"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/roofType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/roof_type"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Ground Floor Type"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/groundFloorType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ground_floor_type"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Other Floor Type"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/otherFloorType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/other_floor_type"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Position"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/position"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Plan Configuration"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/planConfiguration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/plan_configuration"
+                android:padding="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Adobe Mud?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/adobeMudTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/adobeMudTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/adobeMudFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Mud Mortar Stone?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/MudMortarStoneTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/MudMortarStoneTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/MudMortarStoneFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Stone Flag?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/StoneFlagTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/StoneFlagTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/StoneFlagFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Cement Mortar Stone?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/CementMortarTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/CementMortarTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/CementMortarFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Mud Mortar Brick?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/MudMortarBrickTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/MudMortarBrickTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/MudMortarBrickFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Cement Mortar Brick?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/CementMortarBrickTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/CementMortarBrickTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/CementMortarBrickFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Timber?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/TimberTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/TimberTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/TimberFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Bamboo?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/TimberTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/BambooTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/BambooFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Rc Non Engineered?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/rcNonEngineeredTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rcNonEngineeredTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/rcNonEngineeredFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Rc Engineered?"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checkedButton="@id/rcEngineeredTrue"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rcEngineeredTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/rcEngineeredFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apakah Bangunan Ini Menggunakan Other?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/otherTrue">
+
+                <RadioButton
+                    android:id="@+id/otherTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/otherFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:text="Ownership Status"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/ownershipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/legal_ownership_status"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/countFamilies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Masukkan Jumlah Penghuni Bangunan"
+                android:inputType="number"
+                android:padding="15dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Agriculture?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryAgricultureTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryAgricultureTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryAgricultureFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Hotel?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryHotelTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryHotelTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryHotelFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Rental?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryRentalTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryRentalTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryRentalFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Institution?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryInstitutionTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryInstitutionTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryInstitutionFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use School?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondarySchoolTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondarySchoolTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondarySchoolFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Industry?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryIndustryTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryIndustryTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryIndustryFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Health Post?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryHealthPostTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryHealthPostTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryHealthPostFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Gov Office?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryGovOfficeTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryGovOfficeTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryGovOfficeFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Police?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryPoliceTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryPoliceTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryPoliceFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Secondary Use Other?"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:checkedButton="@id/hasSecondaryUseOtherTrue">
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryUseOtherTrue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True"/>
+
+                <RadioButton
+                    android:id="@+id/hasSecondaryUseOtherFalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

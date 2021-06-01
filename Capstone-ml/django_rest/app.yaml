@@ -1,6 +1,11 @@
-runtime: python39
+runtime: python37
+entrypoint: gunicorn -b :$PORT django_rest.wsgi
 
 handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+  
 # This configures Google App Engine to serve the files in the app's static
 # directory.
 - url: /static

@@ -8,7 +8,7 @@ import retrofit2.http.*
 
 interface Api {
     @Headers("Content-Type: application/json")
-    @POST("api/dataset/")
+    @POST("api/prediction/")
     fun prediction(@Body body: MyPredictionRequest): Call<MyPredictionResponse>
 
     @GET("api/train/")

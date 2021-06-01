@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.cendekia.capstone.R
-import com.cendekia.capstone.ui.myhome.MyHomeFragment
-import com.cendekia.capstone.ui.status.StatusFragment
 
 class SectionPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -20,7 +18,7 @@ class SectionPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     override fun getItem(position: Int): Fragment =
         when (position) {
             0 -> StatusFragment()
-            1 -> MyHomeFragment()
+//            1 -> MyHomeFragment()
             else -> Fragment()
         }
 

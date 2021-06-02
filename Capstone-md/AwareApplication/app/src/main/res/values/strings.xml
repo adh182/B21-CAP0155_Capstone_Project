@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">AwareApplication</string>
+    <string name="password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="register">Register</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_an_account_login_here">ALREADY HAVE AN ACCOUNT? LOGIN HERE</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="land_surface_condition">
+        <item>n (natural)</item>
+        <item>o (ocean)</item>
+        <item>t (trench)</item>
+    </string-array>
+
+    <string-array name="foundation_type">
+        <item>h</item>
+        <item>l</item>
+        <item>r</item>
+        <item>u</item>
+        <item>w</item>
+    </string-array>
+
+    <string-array name="roof_type">
+        <item>n</item>
+        <item>q</item>
+        <item>x</item>
+    </string-array>
+
+    <string-array name="ground_floor_type">
+        <item>f</item>
+        <item>m</item>
+        <item>v</item>
+        <item>x</item>
+        <item>z</item>
+    </string-array>
+
+    <string-array name="other_floor_type">
+        <item>j</item>
+        <item>q</item>
+        <item>s</item>
+        <item>x</item>
+    </string-array>
+
+    <string-array name="position">
+        <item>j</item>
+        <item>o</item>
+        <item>s</item>
+        <item>t</item>
+    </string-array>
+
+    <string-array name="plan_configuration">
+        <item>a</item>
+        <item>c</item>
+        <item>d</item>
+        <item>f</item>
+        <item>m</item>
+        <item>o</item>
+        <item>q</item>
+        <item>s</item>
+        <item>u</item>
+    </string-array>
+
+    <string-array name="legal_ownership_status">
+        <item>a</item>
+        <item>r</item>
+        <item>v</item>
+        <item>w</item>
+    </string-array>
+</resources>

@@ -9,116 +9,116 @@ import kotlinx.android.parcel.Parcelize
 data class MyPredictionRequest(
 
     @field:SerializedName("geo_level_1_id")
-    val geoLevel1Id: Int,
+    val geoLevel1Id: Int? = null,
 
     @field:SerializedName("geo_level_2_id")
-    val geoLevel2Id: Int,
+    val geoLevel2Id: Int? = null,
 
     @field:SerializedName("geo_level_3_id")
-    val geoLevel3Id: Int,
+    val geoLevel3Id: Int? = null,
 
     @field:SerializedName("count_floors_pre_eq")
-    val countFloorsPreEq: Int,
+    val countFloorsPreEq: Int? = null,
 
     @field:SerializedName("age")
-    val age: Int,
+    val age: Int? = null,
 
     @field:SerializedName("area_percentage")
-    val areaPercentage: Int,
+    val areaPercentage: Int? = null,
 
     @field:SerializedName("height_percentage")
-    val heightPercentage: Int,
+    val heightPercentage: Int? = null,
 
     @field:SerializedName("land_surface_condition")
-    val landSurfaceCondition: String,
+    val landSurfaceCondition: String? = null,
 
     @field:SerializedName("foundation_type")
-    val foundationType: String,
+    val foundationType: String? = null,
 
     @field:SerializedName("roof_type")
-    val roofType: String,
+    val roofType: String? = null,
 
     @field:SerializedName("ground_floor_type")
-    val groundFloorType: String,
+    val groundFloorType: String? = null,
 
     @field:SerializedName("other_floor_type")
-    val otherFloorType: String,
-
-    @field:SerializedName("plan_configuration")
-    val planConfiguration: String,
+    val otherFloorType: String? = null,
 
     @field:SerializedName("position")
-    val position: String,
+    val position: String? = null,
+
+    @field:SerializedName("plan_configuration")
+    val planConfiguration: String? = null,
 
     @field:SerializedName("has_superstructure_adobe_mud")
-    val hasSuperstructureAdobeMud: Boolean,
+    val hasSuperstructureAdobeMud: Boolean? = null,
 
     @field:SerializedName("has_superstructure_mud_mortar_stone")
-    val hasSuperstructureMudMortarStone: Boolean,
+    val hasSuperstructureMudMortarStone: Boolean? = null,
 
     @field:SerializedName("has_superstructure_stone_flag")
-    val hasSuperstructureStoneFlag: Boolean,
+    val hasSuperstructureStoneFlag: Boolean? = null,
 
     @field:SerializedName("has_superstructure_cement_mortar_stone")
-    val hasSuperstructureCementMortarStone: Boolean,
+    val hasSuperstructureCementMortarStone: Boolean? = null,
 
     @field:SerializedName("has_superstructure_mud_mortar_brick")
-    val hasSuperstructureMudMortarBrick: Boolean,
+    val hasSuperstructureMudMortarBrick: Boolean? = null,
 
     @field:SerializedName("has_superstructure_cement_mortar_brick")
-    val hasSuperstructureCementMortarBrick: Boolean,
+    val hasSuperstructureCementMortarBrick: Boolean? = null,
 
     @field:SerializedName("has_superstructure_timber")
-    val hasSuperstructureTimber: Boolean,
+    val hasSuperstructureTimber: Boolean? = null,
 
     @field:SerializedName("has_superstructure_bamboo")
-    val hasSuperstructureBamboo: Boolean,
+    val hasSuperstructureBamboo: Boolean? = null,
 
     @field:SerializedName("has_superstructure_rc_non_engineered")
-    val hasSuperstructureRcNonEngineered: Boolean,
+    val hasSuperstructureRcNonEngineered: Boolean? = null,
 
     @field:SerializedName("has_superstructure_rc_engineered")
-    val hasSuperstructureRcEngineered: Boolean,
+    val hasSuperstructureRcEngineered: Boolean? = null,
 
     @field:SerializedName("has_superstructure_other")
-    val hasSuperstructureOther: Boolean,
+    val hasSuperstructureOther: Boolean? = null,
 
     @field:SerializedName("legal_ownership_status")
-    val legalOwnershipStatus: String,
+    val legalOwnershipStatus: String? = null,
 
     @field:SerializedName("count_families")
-    val countFamilies: Int,
+    val countFamilies: Int? = null,
 
     @field:SerializedName("has_secondary_use")
-    val hasSecondaryUse: Boolean,
+    val hasSecondaryUse: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_agriculture")
-    val hasSecondaryUseAgriculture: Boolean,
+    val hasSecondaryUseAgriculture: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_hotel")
-    val hasSecondaryUseHotel: Boolean,
+    val hasSecondaryUseHotel: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_rental")
-    val hasSecondaryUseRental: Boolean,
+    val hasSecondaryUseRental: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_institution")
-    val hasSecondaryUseInstitution: Boolean,
+    val hasSecondaryUseInstitution: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_school")
-    val hasSecondaryUseSchool: Boolean,
+    val hasSecondaryUseSchool: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_industry")
-    val hasSecondaryUseIndustry: Boolean,
+    val hasSecondaryUseIndustry: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_health_post")
-    val hasSecondaryUseHealthPost: Boolean,
+    val hasSecondaryUseHealthPost: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_gov_office")
-    val hasSecondaryUseGovOffice: Boolean,
+    val hasSecondaryUseGovOffice: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_use_police")
-    val hasSecondaryUseUsePolice: Boolean,
+    val hasSecondaryUseUsePolice: Boolean? = null,
 
     @field:SerializedName("has_secondary_use_other")
-    val hasSecondaryUseOther: Boolean
+    val hasSecondaryUseOther: Boolean? = null
 ) : Parcelable

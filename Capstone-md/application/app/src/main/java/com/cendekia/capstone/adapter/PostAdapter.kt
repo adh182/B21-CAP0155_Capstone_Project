@@ -8,7 +8,7 @@ import com.cendekia.capstone.R
 import com.cendekia.capstone.data.source.models.MyTrainResponse
 import com.cendekia.capstone.databinding.ItemPostBinding
 
-class PostAdapter(private val list: ArrayList<MyTrainResponse>): RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
+class PostAdapter(private val list: ArrayList<MyTrainResponse>):RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
     fun setData(newListData:  ArrayList<MyTrainResponse>?) {
         if (newListData == null) return
         list.clear()
@@ -16,15 +16,12 @@ class PostAdapter(private val list: ArrayList<MyTrainResponse>): RecyclerView.Ad
         notifyDataSetChanged()
     }
 
-    inner class PostViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
+    inner class PostViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
         private val binding = ItemPostBinding.bind(itemView)
         fun bind(myTrainRespone : MyTrainResponse){
             with(binding){
-                this.tvText.text ="id: ${myTrainRespone.id}\n"+
-                        "id: ${myTrainRespone.id}\n"+
-                        "damage grade : ${myTrainRespone.damageGrade}"+
-                        "age: ${myTrainRespone.age}\n"+
-                        "floors : ${myTrainRespone.areaPercentage}"
+                this.tvGrade.text ="Id: ${myTrainRespone.id}\n"+
+                        "Damage Grade : ${myTrainRespone.damageGrade}"
             }
         }
     }

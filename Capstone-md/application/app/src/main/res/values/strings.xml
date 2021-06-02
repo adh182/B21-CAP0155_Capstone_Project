@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Capstone</string>
+    <string name="app_name">Aware</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="my_home_information">Information</string>
     <string name="there_is_and_earthquake">"There is and earthquake."</string>

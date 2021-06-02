@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone">
-        <activity android:name=".ui.main.ResetPasswordActivity"></activity>
+        <activity android:name=".ui.main.ResultPredictionActivity"></activity>
+        <activity android:name=".ui.main.ResetPasswordActivity" />
         <activity android:name=".ui.main.HomeActivity" />
         <activity android:name=".ui.main.RegisterActivity" />
         <activity android:name=".ui.mitigation.MitigationActivity" />
@@ -19,6 +20,7 @@
         <activity android:name=".ui.main.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -8,7 +8,7 @@
 <h4 align="center">AWARE is a mitigation application to save valuable soul in Indonesia</h4>
 <br>
 <p align="center">
-<img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/login.jpeg?raw=true" alt="login" height="500">   <img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/damage.jpg?raw=true" alt="damage" height="500"> <img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/warning.jpeg?raw=true" alt="warning" height="500">
+<img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/login.jpeg?raw=true" alt="login" height="500"> <img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/warning.jpeg?raw=true" alt="warning" height="500"> <img src="https://github.com/adh182/B21-CAP0155_Capstone_Project/blob/master/.idea/damage.jpg?raw=true" alt="damage" height="500"> 
 </p>
 
 

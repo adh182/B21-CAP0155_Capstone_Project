@@ -14,4 +14,4 @@
 
 <p>AWARE Application is a mitigation system application that can also predict the infrastructure damage. This application is developed as a capstone project of <a href="https://grow.google/intl/id_id/bangkit/">Bangkit 2021</a></p>
 
-## Downlaod
+## Download

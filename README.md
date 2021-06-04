@@ -24,4 +24,11 @@
 
 ## Contributors
 <p>Thanks to all team members for participating to this project.</p>
-
+<ul>
+  <li><a href="https://github.com/muhziddan">Muhammad Ziddan Hidayatullah</li>
+  <li><a href="https://github.com/cendekialnazalia">Cendekia Luthfieta Nazalia</li>
+  <li><a href="https://github.com/ilmibarokah">Ilmi Barokah</li>
+  <li><a href="https://github.com/adh182">Islamuddin Alimurrijal</li>
+  <li><a href="https://github.com/daegalp">Daegal Prayoga</li>
+  <li><a href="https://github.com/ambasyar">Ahmad Mushthafa Basyar</li>
+</ul>

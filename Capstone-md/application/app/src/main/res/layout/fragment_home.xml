@@ -222,7 +222,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Type of foundation used while building. Possible values: h, i, r, u, w (h = , i = , r = , u = , w = wall)"
+                android:text="Type of foundation used while building. Possible values: h, i, r, u, w (h = strap footing, i = combined footing , r = simple footing , u = drilled pier , w = wall)"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -247,7 +247,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Type of roof used while building. Possible values: n, q, x (n = , q = , x = )"
+                android:text="Type of roof used while building. Possible values: n, q, x (n = butterfly , q = shed , x = combination )"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -272,7 +272,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Type of the ground floor. Possible values: f, m, v, x, z (f = , m = , v = , x = , z = )"
+                android:text="Type of the ground floor. Possible values: f, m, v, x, z (f = timber , m = linoleum , v = rubber , x = cork , z = asphalt)"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -297,7 +297,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Type of constructions used in higher than the ground floors (except of roof). Possible values: j, q, s, x (j = , q = , s = , x = )"
+                android:text="Type of constructions used in higher than the ground floors (except of roof). Possible values: j, q, s, x (j = glass, q = PVC , s = wood , x = river stone )"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -322,7 +322,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Position of the building. Possible values: j, o, s, t (j = , o = , s = , t = )"
+                android:text="Position of the building. Possible values: j, o, s, t (j = bottom, o = overhead, s =  south, t = top )"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -347,7 +347,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Building plan configuration. Possible values: a, c, d, f, m, n, o, q, s, u (a = , c = , d = , f = , m = , o = , q = , s = , u =  )"
+                android:text="Building plan configuration. Possible values: a, c, d, f, m, n, o, q, s, u (a = adobe buildings, c = brick/stone in mud mortar buildings , d = brick/stone in cement mortar , f = wooden buildings , m = reinforced concrete buildings , o = current construction practices , q =  nepal building code , s = modified nepa; building code, u =  well designed structure )"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -432,7 +432,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
-
+                android:id="@+id/StoneFlag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -461,6 +461,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/CementMortar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -489,6 +490,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/MudMortarBrick"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -517,6 +519,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/CementMortarBrick"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -545,6 +548,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/Timber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -573,6 +577,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/Bamboo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -601,6 +606,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/rcNonEngineered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -629,6 +635,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/rcEngineered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -657,6 +664,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/other"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -683,7 +691,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_light"
-                android:text="Legal ownership status of the land where building was built. Possible values: a, r, v, w.(a = , r = , v = , w = )"
+                android:text="Legal ownership status of the land where building was built. Possible values: a, r, v, w.(a = right of ownership, r = building rights , v = cultivation rights , w = lease right)"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -717,6 +725,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -745,6 +754,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryAgriculture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -773,6 +783,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryHotel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -801,6 +812,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryRental"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -829,6 +841,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryInstitution"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -857,6 +870,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondarySchool"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -885,6 +899,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryIndustry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -913,6 +928,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryHealthPost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -941,6 +957,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryGovOffice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -969,6 +986,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryPolice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -997,6 +1015,7 @@
                 android:textSize="18dp" />
 
             <RadioGroup
+                android:id="@+id/hasSecondaryUseOther"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

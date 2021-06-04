@@ -14,6 +14,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.cendekia.capstone.R
 import com.cendekia.capstone.databinding.FragmentStatusBinding
 import com.cendekia.capstone.ui.mitigation.MitigationActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
 class StatusFragment : Fragment(R.layout.fragment_status) {
 
@@ -57,7 +59,9 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
                     .load(R.drawable.icon_safe)
                     .apply(RequestOptions().override(200, 200))
                     .into(binding.icon)
-                binding.tvSr.text = safeAverageRs
+                binding.tvSr.text = "$safeAverageRs SR"
+                binding.tvDate.text = getCurrentDateTime().toString()
+                binding.subTitle.text = "“Safe area.”"
             }
             richterScale1 in 3..6 && richterScale2 in 3..6 -> {
                 val safeAverageRs = resources.getString(R.string.richter_scale, average)
@@ -66,7 +70,9 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
                     .load(R.drawable.icon_warning)
                     .apply(RequestOptions().override(200, 200))
                     .into(binding.icon)
-                binding.tvSr.text = safeAverageRs
+                binding.tvSr.text = "$safeAverageRs SR"
+                binding.tvDate.text = getCurrentDateTime().toString()
+                binding.subTitle.text = "“There is a sign of earthquake.”"
             }
             richterScale1 >= 6 && richterScale2 >= 6 -> {
                 val safeAverageRs = resources.getString(R.string.richter_scale, average)
@@ -75,7 +81,9 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
                     .load(R.drawable.icon_hazard)
                     .apply(RequestOptions().override(200, 200))
                     .into(binding.icon)
-                binding.tvSr.text = safeAverageRs
+                binding.tvSr.text = "$safeAverageRs SR"
+                binding.tvDate.text = getCurrentDateTime().toString()
+                binding.subTitle.text = "“There is an earthquake.”"
             }
             else -> {
                 binding.statusLayout.setBackgroundColor(green)
@@ -84,7 +92,14 @@ class StatusFragment : Fragment(R.layout.fragment_status) {
                     .apply(RequestOptions().override(200, 200))
                     .into(binding.icon)
                 binding.tvSr.text = "Not an earthquake"
+                binding.tvDate.text = getCurrentDateTime().toString()
+                binding.subTitle.text = "“Safe area.”"
             }
         }
+    }
+
+
+    fun getCurrentDateTime(): Date {
+        return Calendar.getInstance().time
     }
 }

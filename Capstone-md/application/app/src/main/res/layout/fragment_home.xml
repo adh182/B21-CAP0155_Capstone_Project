@@ -10,86 +10,197 @@
         android:layout_height="match_parent"
         tools:context=".HomeFragment">
 
+        <ImageView
+            android:id="@+id/iconForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/icon_form"
+            android:contentDescription="@string/icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iconLineForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icon_line"
+            android:contentDescription="@string/icon"
+            android:foregroundGravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iconForm" />
+
+        <TextView
+            android:id="@+id/tvHeaderForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Welcome..."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iconForm"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeaderForm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Enter your building data here"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iconForm"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeaderForm" />
+
+        <TextView
+            android:id="@+id/tvHeaderForm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Make sure to input data correctly"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iconForm"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeaderForm2" />
+
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/iconForm">
+
+            <TextView
+                android:id="@+id/tvDescGeoLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Geo Level ID (1.Province, 2. City, 3.Districts)"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
 
             <EditText
                 android:id="@+id/geoLevel1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
                 android:hint="Masukkan Geo Level Id 1 (1/2/3)"
-                android:inputType="text"
+                android:inputType="number"
                 android:nextFocusDown="@id/geoLevel2"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="16sp"/>
 
             <EditText
                 android:id="@+id/geoLevel2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Geo Level Id (1/2/3)"
-                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Enter Geo Level Id 2 (1/2/3)"
+                android:inputType="number"
                 android:nextFocusDown="@id/geoLevel3"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="16sp"/>
 
             <EditText
                 android:id="@+id/geoLevel3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Geo Level Id (1/2/3)"
-                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Enter Geo Level Id 3 (1/2/3)"
+                android:inputType="number"
                 android:nextFocusDown="@id/countFloorsPreEq"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="16sp"/>
 
             <EditText
                 android:id="@+id/countFloorsPreEq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Jumlah Lantai"
-                android:inputType="text"
+                android:hint="Enter the number of floors of the building"
+                android:inputType="number"
                 android:nextFocusDown="@id/age"
-                android:padding="15dp" />
+                android:fontFamily="@font/poppins_regular"
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"/>
 
             <EditText
                 android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Usia Bangunan"
-                android:inputType="text"
+                android:hint="Enter the age of the building (in years)"
+                android:inputType="number"
                 android:nextFocusDown="@id/areaPercentage"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
 
             <EditText
                 android:id="@+id/areaPercentage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Luas Bangunan"
-                android:inputType="text"
+                android:hint="Enter Building Area (in meters)"
+                android:inputType="number"
                 android:nextFocusDown="@id/heightPercentage"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
 
             <EditText
                 android:id="@+id/heightPercentage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Tinggi Bangunan"
-                android:inputType="text"
+                android:hint="Enter Building Height (in meters)"
+                android:inputType="number"
                 android:nextFocusDown="@array/land_surface_condition"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Surface condition of the land where the building was built. Possible values: n, o, t (n = natural, o = ocean, t = trench)"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/landSurfaceCondition"
@@ -99,7 +210,22 @@
                 android:hint="Land Surface Condition"
                 android:inputType="text"
                 android:nextFocusDown="@array/foundation_type"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Type of foundation used while building. Possible values: h, i, r, u, w (h = , i = , r = , u = , w = wall)"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/foundationType"
@@ -109,7 +235,22 @@
                 android:hint="Foundation Type"
                 android:inputType="text"
                 android:nextFocusDown="@array/roof_type"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Type of roof used while building. Possible values: n, q, x (n = , q = , x = )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/roofType"
@@ -119,7 +260,22 @@
                 android:hint="Roof Type"
                 android:inputType="text"
                 android:nextFocusDown="@array/ground_floor_type"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Type of the ground floor. Possible values: f, m, v, x, z (f = , m = , v = , x = , z = )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/groundFloorType"
@@ -129,7 +285,22 @@
                 android:hint="Ground Floor Type"
                 android:inputType="text"
                 android:nextFocusDown="@array/other_floor_type"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Type of constructions used in higher than the ground floors (except of roof). Possible values: j, q, s, x (j = , q = , s = , x = )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/otherFloorType"
@@ -139,7 +310,22 @@
                 android:hint="Other Floor Type"
                 android:inputType="text"
                 android:nextFocusDown="@array/position"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Position of the building. Possible values: j, o, s, t (j = , o = , s = , t = )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/position"
@@ -149,7 +335,22 @@
                 android:hint="Position"
                 android:inputType="text"
                 android:nextFocusDown="@array/land_surface_condition"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Building plan configuration. Possible values: a, c, d, f, m, n, o, q, s, u (a = , c = , d = , f = , m = , o = , q = , s = , u =  )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/planConfiguration"
@@ -158,7 +359,10 @@
                 android:layout_marginTop="10dp"
                 android:hint="Plan Configuration"
                 android:inputType="text"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textSize="16sp"
+                android:textColorHighlight="@color/colorPrimary"
+                android:fontFamily="@font/poppins_regular"/>
 
 
             <TextView
@@ -447,30 +651,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Apakah Bangunan Ini Menggunakan Other?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Apakah Bangunan Ini Menggunakan Other?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/otherTrue">
+                android:checkedButton="@id/otherTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/otherTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/otherFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Legal ownership status of the land where building was built. Possible values: a, r, v, w.(a = , r = , v = , w = )"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/ownershipStatus"
@@ -487,322 +703,323 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Masukkan Jumlah Penghuni Bangunan"
-                android:inputType="text"
+                android:hint="Enter the number of people living in the building"
+                android:inputType="number"
                 android:padding="15dp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryTrue">
+                android:checkedButton="@id/hasSecondaryTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Agriculture?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Agriculture?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryAgricultureTrue">
+                android:checkedButton="@id/hasSecondaryAgricultureTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryAgricultureTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryAgricultureFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Hotel?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Hotel?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryHotelTrue">
+                android:checkedButton="@id/hasSecondaryHotelTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryHotelTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryHotelFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Rental?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Rental?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryRentalTrue">
+                android:checkedButton="@id/hasSecondaryRentalTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryRentalTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryRentalFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Institution?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Institution?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryInstitutionTrue">
+                android:checkedButton="@id/hasSecondaryInstitutionTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryInstitutionTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryInstitutionFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use School?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use School?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondarySchoolTrue">
+                android:checkedButton="@id/hasSecondarySchoolTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondarySchoolTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondarySchoolFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Industry?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Industry?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryIndustryTrue">
+                android:checkedButton="@id/hasSecondaryIndustryTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryIndustryTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryIndustryFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Health Post?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Health Post?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryHealthPostTrue">
+                android:checkedButton="@id/hasSecondaryHealthPostTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryHealthPostTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryHealthPostFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Gov Office?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Gov Office?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryGovOfficeTrue">
+                android:checkedButton="@id/hasSecondaryGovOfficeTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryGovOfficeTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryGovOfficeFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Police?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Police?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryPoliceTrue">
+                android:checkedButton="@id/hasSecondaryPoliceTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryPoliceTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryPoliceFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Has Secondary Use Other?"
-                android:textSize="18dp"
                 android:layout_marginTop="10dp"
-                android:padding="15dp"/>
+                android:padding="15dp"
+                android:text="Has Secondary Use Other?"
+                android:textSize="18dp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:orientation="horizontal"
-                android:checkedButton="@id/hasSecondaryUseOtherTrue">
+                android:checkedButton="@id/hasSecondaryUseOtherTrue"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/hasSecondaryUseOtherTrue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True"/>
+                    android:text="True" />
 
                 <RadioButton
                     android:id="@+id/hasSecondaryUseOtherFalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="False" />
             </RadioGroup>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
                     android:id="@+id/btnSubmitData"
                     android:layout_width="wrap_content"
@@ -810,11 +1027,10 @@
                     android:layout_centerInParent="true"
                     android:layout_marginTop="10dp"
                     android:padding="15dp"
-                    android:text="SUBMIT"/>
+                    android:text="SUBMIT" />
             </RelativeLayout>
 
         </LinearLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

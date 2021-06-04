@@ -125,26 +125,9 @@
                     <TextView
                         android:id="@+id/tv_location"
                         style="@style/tvDetailStatus"
-                        tools:text="Jakarta" />
+                        android:text="Gempa Proximity" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_time"
-                        style="@style/tvDetailStatus"
-                        tools:text="00.42.37 WIB" />
-
-                    <TextView
-                        style="@style/tvDetailStatus"
-                        android:text="@string/sr" />
-
-                    <TextView
-                        style="@style/tvDetailStatus"
-                        android:text="@string/gempa_proximity" />
-                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cendekia.capstone.R
 import com.cendekia.capstone.adapter.PostAdapter
@@ -35,6 +36,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        radioGroup = binding.adobeMud
+
         binding.btnSubmitData.setOnClickListener {
             Intent(activity, ResultPredictionActivity::class.java).also {
                 createPost()
@@ -64,29 +67,41 @@ class HomeFragment : Fragment() {
                 true,
                 false,
                 false,
-                false,
+                true,
                 false,
                 true,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
+                true,
                 binding.ownershipStatus.text.toString(),
                 binding.countFamilies.text.toString().toInt(),
                 false,
                 true,
+                true,
+                false,
+                true,
                 false,
                 false,
+                true,
                 false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
                 false
             )
-        )
+        ).enqueue(object : Callback<MyPredictionResponse> {
+            override fun onResponse(
+                call: Call<MyPredictionResponse>,
+                response: Response<MyPredictionResponse>
+            ) {
+                  Toast.makeText(activity, "Data Sent Successfully", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onFailure(call: Call<MyPredictionResponse>, t: Throwable) {
+                t.message?.let { Log.d("Failure", it) }
+                Toast.makeText(activity, "Data Sent Failed, Please Check Your Data", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 }

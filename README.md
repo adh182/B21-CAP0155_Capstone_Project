@@ -18,7 +18,7 @@
 <p> To use the app, follow the following steps: </p>
 <ul>
   <li>Set up the environment (your phone).</li>
-  <li>Download the apk from this <a href="https://drive.google.com/drive/folders/1tVkk6oe2SxPX-ZqrlmoVzGajEm19YmDn?usp=sharingABC">link</a></>
+  <li>Download the apk from this <a href="https://drive.google.com/drive/folders/1tVkk6oe2SxPX-ZqrlmoVzGajEm19YmDnABCDEF">link</a></li>
   <li>To opn the app, make sure you are connected to the internet.</li>
 </ul>
 

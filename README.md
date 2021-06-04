@@ -19,7 +19,7 @@
 <ul>
   <li>Set up the environment (your phone).</li>
   <li>Download the apk from this <a href="https://drive.google.com/drive/folders/1tVkk6oe2SxPX-ZqrlmoVzGajEm19YmDnABCDEF">link</a></li>
-  <li>To opn the app, make sure you are connected to the internet.</li>
+  <li>To open the app, make sure you are connected to the internet.</li>
 </ul>
 
 ## Contributors
